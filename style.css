@@ -64,6 +64,12 @@ nav:hover {
   font-size: 1vw;
 }
 
+.download{
+  padding: 0 15px;
+  border: none !important;
+  border-radius: 8px !important;
+}
+
 .image {
   position: relative;
   width: 100%;
@@ -154,6 +160,7 @@ nav:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 15px;
 }
 
 .contact-title {
