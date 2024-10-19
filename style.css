@@ -17,11 +17,13 @@ html, body, p, button, ul, li, a, div, span {
 }
 
 nav{
-  transition: background-color .5s;
+  transition: .5s;
+  opacity: 50%;
 }
 
 nav:hover {
   background-color: #262626;
+  opacity: 100%;
 }
 
 .home-container {
@@ -157,9 +159,9 @@ nav:hover {
 }
 .contact-container{
   display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: center;
-  align-items: center;
   gap: 15px;
 }
 
@@ -172,18 +174,84 @@ nav:hover {
   margin: 1rem 0;
 }
 .email{
-  background-color: #141414;
+  background-color: #95a5a6;
+  color: #d9d9d9;
+}
+.fbl{
+  background-color: #d9d9d9;
+  color: #262626;
+}
+.fb{
+  background-color: #1d49e7;
+  color: #d9d9d9;
+}
+.alt{
+  background: linear-gradient(45deg, 
+    #cc2366,  /* Magenta */
+    #833ab4,  /* Purple */
+    #5851db,  /* Deep Purple */
+    #405de6  /* Blue */
+  );
+  background-size: 150% 150%;
+  color: #d9d9d9;
+}
+.phone{
+  background-color: #4caf50;
+  color: #d9d9d9;
+}
+.x{
+  background-color: #2980b9;
+  color: #d9d9d9;
+}
+.ig{
+  background: linear-gradient(45deg, 
+    #f09433,  /* Orange */
+    #e6683c,  /* Deep Orange */
+    #dc2743,  /* Red */
+    #cc2366,  /* Magenta */
+    #bc1888,  /* Deep Pink */
+    #833ab4,  /* Purple */
+    #5851db,  /* Deep Purple */
+    #405de6  /* Blue */
+  );
+  background-size: 150% 150%;
+  color: #d9d9d9;
+}
+.yt{
+  background-color: #FF0000;
   color: #d9d9d9;
 }
 .con-list{
   padding: 0 25px 25px 25px;
   border-radius: 25px;
-  width: 400px;
+  width: 100%;
 }
 
 .large-icon {
   font-size: 80px;
 }
+
+.item-link{
+  transition: transform 0.3s ease;
+}
+
+.item-link:hover{
+  transform: scale(1.02);
+}
+
+.footer {
+  background-color: #262626; /* Dark background */
+  color: #d9d9d9; /* Light text */
+  padding: 20px 0;
+}
+.footer a {
+  color: #d9d9d9; /* Light color for links */
+  text-decoration: none; /* Remove underline */
+}
+.footer a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
 
 /* Responsive Styles */
 @media only screen and (max-width: 767px) {
