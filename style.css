@@ -157,12 +157,21 @@ nav:hover {
   background-color: #262626;
   padding: 5rem;
 }
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
 .contact-container{
   display: flex;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  justify-content: center;
   gap: 15px;
+  width: 100%;
+  transition: transform 0.4s ease;
+  scroll-behavior: smooth;
+}
+
+.contact-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for a cleaner look */
 }
 
 .contact-title {
@@ -171,8 +180,26 @@ nav:hover {
   letter-spacing: 5px;
   font-weight: 700;
   text-align: start;
-  margin: 1rem 0;
+  margin-bottom: 8rem;
 }
+
+.con-list{
+  padding: 0 25px 25px 25px;
+  border-radius: 25px;
+  width: 400px;
+}
+
+.prev, .next {
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
 .email{
   background-color: #95a5a6;
   color: #d9d9d9;
@@ -221,14 +248,13 @@ nav:hover {
   background-color: #FF0000;
   color: #d9d9d9;
 }
-.con-list{
-  padding: 0 25px 25px 25px;
-  border-radius: 25px;
-  width: 100%;
-}
 
 .large-icon {
   font-size: 80px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .item-link{
@@ -292,6 +318,14 @@ nav:hover {
   }
   .resume-container {
     padding: 0;
+  }
+  #contact{
+    padding: 1rem;
+  }
+
+  .contact-title {
+    margin-top: 5rem;
+    margin-bottom: 8rem;
   }
 
 }
