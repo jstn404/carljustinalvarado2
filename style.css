@@ -34,6 +34,7 @@ nav:hover {
   background-color: #262626;
   width: 100%;
   gap: 50px;
+  padding-bottom: 7rem;
 }
 
 .home-container .text, 
@@ -157,12 +158,11 @@ nav:hover {
   background-color: #262626;
   padding: 5rem;
 }
-.carousel-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
+
 .contact-container{
+  position: relative;
+  overflow: auto;
+  white-space: nowrap;
   display: flex;
   gap: 15px;
   width: 100%;
@@ -175,7 +175,7 @@ nav:hover {
 }
 
 .contact-title {
-  font-size: 24px;
+  font-size: 55px;
   color: #d9d9d9;
   letter-spacing: 5px;
   font-weight: 700;
@@ -269,10 +269,12 @@ nav:hover {
   background-color: #262626; /* Dark background */
   color: #d9d9d9; /* Light text */
   padding: 20px 0;
+  font-size: 2vh;
 }
 .footer a {
   color: #d9d9d9; /* Light color for links */
   text-decoration: none; /* Remove underline */
+  opacity: 70%;
 }
 .footer a:hover {
   text-decoration: underline; /* Underline on hover */
@@ -289,7 +291,7 @@ nav:hover {
     text-align: center;
     gap: 0;
     margin: 0;
-    padding: 0;
+    padding: 5rem 1rem;
   }
 
   .container{
@@ -305,11 +307,21 @@ nav:hover {
     width: 200px;
   }
 
+  .text, .image-con{
+    margin-top: 10px !important;
+    padding: 0;
+  }
+
+  .download{
+    margin-top: 0px !important;
+  }
+
   .intro p {
     font-size: 6vw;
   }
 
   .intro-body p {
+    margin: 0 !important;
     font-size: 3vw;
   }
 
@@ -324,8 +336,11 @@ nav:hover {
   }
 
   .contact-title {
+    font-size: 24px;
     margin-top: 5rem;
     margin-bottom: 8rem;
   }
-
+  .footer {
+    text-align: center;
+  }
 }
