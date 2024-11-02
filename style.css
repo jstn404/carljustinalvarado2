@@ -8,6 +8,10 @@ html, body, p, button, ul, li, a, div, span {
   padding: 0;
 }
 
+body{
+  width: 100%;
+}
+
 #navbarNav .nav-link, #brand {
   color: #d9d9d9;
 }
@@ -121,7 +125,7 @@ nav:hover {
 .educ-list{
   background-color: #262626;
   color: #d9d9d9;
-  padding: 15px;
+  padding: 20px;
   border-radius: 25px;
 }
 
@@ -148,7 +152,7 @@ nav:hover {
 
 .exp-list{
   color: #262626;
-  padding: 15px;
+  padding: 20px;
   border-radius: 25px;
   border: 1px solid rgb(192, 192, 192);
 }
