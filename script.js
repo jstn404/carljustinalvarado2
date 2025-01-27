@@ -74,3 +74,20 @@ const scrollContainer = document.querySelector('.scroll-container');
         behavior: 'smooth',
       });
     });
+
+    const intro = document.getElementById("intro");
+    const downButton = document.getElementById("downButton");
+    const upButton = document.getElementById("upButton");
+
+    // Scroll down to portfolio
+    downButton.addEventListener("click", () => {
+      intro.classList.add("hidden");
+      document.body.style.overflowY = "auto"; // Enable scrolling for the portfolio
+    });
+
+    // Scroll up to intro
+    upButton.addEventListener("click", () => {
+      intro.classList.remove("hidden");
+      document.body.style.overflowY = "hidden"; // Disable scrolling
+      window.scrollTo(0, 0); // Scroll back to the top
+    });
