@@ -12,7 +12,7 @@ body{
   width: 100%;
 }
 
-#navbarNav .nav-link, #brand {
+a.nav-link, #brand {
   color: #d9d9d9;
 }
 
@@ -25,10 +25,15 @@ nav{
   opacity: 50%;
 }
 
+a.nav-link:hover{
+  color: #1d49e7;
+}
+
 nav:hover {
   background-color: #262626;
   opacity: 100%;
 }
+
 
 .home-container {
   display: flex;
@@ -76,6 +81,12 @@ nav:hover {
   border: none !important;
   border-radius: 8px !important;
   background-color: #d9d9d9; 
+  opacity: 70%;
+  transition: .5s;
+}
+
+.download:hover{
+  opacity: 100%;
 }
 
 .image {
@@ -285,6 +296,245 @@ nav:hover {
   text-decoration: underline; /* Underline on hover */
 }
 
+#projects{
+  padding: 5rem;
+  height: 100vh;
+}
+
+#project{
+  padding: 2rem;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 2rem; 
+}
+
+.container-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  perspective: 1200px;
+}
+.perspective-card {
+  position: relative;
+  width: 220px;
+  height: 380px;
+  background-color: #333;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+.perspective-card:nth-child(1) {
+  height: 350px;
+  margin-top: -80px;
+  transform: rotateY(25deg) translateX(20px);
+  background-image: url("../images/logo/techprov2.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.perspective-card:nth-child(2) {
+  margin-top: -80px;
+  transform: rotateY(25deg) translateX(20px);
+  background-image: url("../images/poster/3.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.perspective-card:nth-child(3) {
+  transform: rotateY(0deg) translateX(0px);
+  background-image: url("../images/graphic/piattos.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.perspective-card:nth-child(4) {
+  margin-top: -80px;
+  transform: rotateY(-25deg) translateX(-20px);
+  background-image: url("../images/illust/blues.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.perspective-card:nth-child(5) {
+  border-radius: 0 5px 5px 5px;
+  clip-path: polygon(0% 9.3%, 59.2% 9.5%, 64% 0%, 100.1% 0%, 100.1% 100.3%, 0% 100.3%);
+  height: 350px;
+  margin-top: -80px;
+  transform: rotateY(-25deg) translateX(-20px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5) !important;
+}
+.perspective-card:hover {
+  transform: rotateY(0deg) scale(1.05);
+  z-index: 10;
+}
+.perspective-card img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+.card-content {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  background: linear-gradient(0deg, #333, transparent);
+}
+.card-content span {
+  font-size: 0.9rem;
+  color: #a9a9a9;
+}
+.card-content h5 {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.my-work{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.my-projects{
+  font-size: 72px;
+  font-weight: 900;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 40px;
+  aspect-ratio: 1;
+   --c: linear-gradient(#000 0 0);
+   --m: radial-gradient(farthest-side,#000 92%,#0000);
+  background: 
+    var(--m) center               /12px 12px,
+    var(--c) left 50% top    -20px/8px 16px, 
+    var(--c) left 50% bottom -20px/8px 16px, 
+    var(--c) top  50% left   -20px/16px 8px, 
+    var(--c) top  50% right  -20px/16px 8px;
+  background-repeat: no-repeat;
+  animation: 
+    l18-1 1.5s infinite,
+    l18-2 1.5s infinite;
+}
+@keyframes l18-1 {
+  30%,
+  70% {background-position: 
+        center,
+        left 50% top    calc(50% - 8px),
+        left 50% bottom calc(50% - 8px),
+        top  50% left   calc(50% - 8px),
+        top  50% right  calc(50% - 8px)}
+}
+@keyframes l18-2 {
+  0%,40%   {transform: rotate(0)}
+  60%,100% {transform: rotate(90deg)}
+}
+
+/* On smaller screens (less than 768px), switch to 1 column */
+@media (max-width: 768px) {
+  #project{
+    padding: 0;
+  }
+  .project-container {
+    padding: 0 !important;
+    grid-template-columns: 1fr; 
+    flex-direction: column;
+  }
+  .container-wrapper {
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0;
+    gap: 2rem;
+    padding: 1rem;
+  }
+  .perspective-card {
+    transform: rotateY(0deg) !important;
+    width: 100%;
+  }
+  .my-projects{
+    font-size: 32px;
+    padding-bottom: 5rem;
+  }
+  .perspective-card:nth-child(3) {
+    margin-top: -80px;
+  }
+}
+
+/* Basic styling for project cards */
+.projects {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  min-height: 200px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.projects:hover {
+  transform: translateY(-5px);
+}
+
+.projects img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: auto;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 90vh;
+}
+
+.modal-close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: #bbb;
+}
+
+.project-container{
+  padding: 5rem;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 95%;
+  }
+}
 
 /* Responsive Styles */
 @media only screen and (max-width: 767px) {

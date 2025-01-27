@@ -31,3 +31,46 @@ nextButton.addEventListener('click', () => {
         updateScrollPosition();
     }
 });
+
+// Get modal elements
+const modal = document.getElementById('imageModal');
+const modalImg = document.getElementById('modalImage');
+const closeBtn = document.getElementsByClassName('modal-close')[0];
+
+// Add click event to all project cards
+document.querySelectorAll('.projects').forEach(project => {
+  project.addEventListener('click', function() {
+    const imageSrc = this.getAttribute('data-image');
+    modal.style.display = 'block';
+    modalImg.src = imageSrc;
+  });
+});
+
+// Close modal when clicking the × button
+closeBtn.onclick = function() {
+  modal.style.display = 'none';
+}
+
+// Close modal when clicking outside the image
+modal.onclick = function(event) {
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape' && modal.style.display === 'block') {
+    modal.style.display = 'none';
+  }
+});
+
+
+const scrollContainer = document.querySelector('.scroll-container');
+    scrollContainer.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      scrollContainer.scrollBy({
+        left: e.deltaY > 0 ? 100 : -100,
+        behavior: 'smooth',
+      });
+    });

@@ -1,0 +1,145 @@
+body,p,div{
+  background-color: #262626;
+  color: #d9d9d9;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+img{
+  width: 100%;
+  border-radius: 15px;
+}
+
+section{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  scroll-snap-align: start;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 100px;
+}
+
+.containerr{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.proj-container{
+  width: 450px;
+  height: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.208);
+  border-radius: 25px;
+  display: flex;
+  padding: 25px;
+  flex-direction: column; 
+  transition: .5s;
+}
+
+.proj-container:hover{
+  transform: scale(105%);
+}
+
+.img-con{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title{
+  font-size: 92px;
+  font-weight: 900;
+}
+
+div p{
+  text-align: start;
+}
+
+.title-text{
+  font-size: 24px;
+}
+
+.body-text{
+  font-weight:lighter;
+  font-size: 14px;
+  opacity: 80%;
+}
+
+.home-button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: #262626; /* Dark theme */
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  z-index: 10;
+}
+
+.home-button {
+  width: 24px;
+  height: 24px;
+  border: solid 1px blue ;
+  padding: 25px;
+}
+
+.home-button:hover {
+  background-color: #4c4c4c;
+  transform: translateX(-50%) scale(1.1);
+  transition: 0.3s;
+}
+
+.technology{
+  display: flex;
+  text-align: start;
+  gap: 5px;
+}
+
+.tech{
+  background-color: blue;
+  padding: 5px 15px;
+  border-radius: 50px;
+}
+
+.sub{
+  border: 1px solid blue;
+  padding: 5px 15px;
+  border-radius: 50px;
+}
+
+@media (max-width: 768px) {
+  p{
+    font-size: 35px;
+  }
+  section{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+  .containerr{
+    gap: 15px;
+  }
+  .proj-container{
+    width: 100%;
+  }
+  img{
+    width: 100%;
+  }
+  .home-button{
+    z-index: 10;
+  }
+  .title{
+    height: 300px;
+  }
+}
